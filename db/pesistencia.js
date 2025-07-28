@@ -2,7 +2,7 @@ import { MongoClient } from "mongodb";
 
 const uri = "mongodb+srv://nicoloe24:NIcol12345@nicole.m2m1ow1.mongodb.net/"
 
-const client = new MongoClient(uri);
+export const client = new MongoClient(uri);
 
 export async function ingredientes() {
     await client.connect()
