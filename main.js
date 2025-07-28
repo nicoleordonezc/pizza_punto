@@ -13,7 +13,7 @@ async function mostrarMenu() {
       {
         type: "list",
         name: "opcion",
-        message: "🍕 Bienvenido al sistema de pedidos de Pizza Punto. ¿Qué deseas hacer?",
+        message: "🍕 Bienvenido al sistema de pedidos de Pizza & Punto. ¿Qué deseas hacer?",
         choices: [
           "1. Ver ingredientes más usados",
           "2. Ver promedio de precios por categoría",
@@ -43,7 +43,7 @@ async function mostrarMenu() {
 
       case "5. Salir":
         salir = true;
-        console.log("👋 ¡Gracias por usar Pizza Punto!");
+        console.log("👋 ¡Gracias por usar Pizza & Punto!");
         break;
     }
   }

@@ -24,5 +24,10 @@ export async function categoriaPizza() {
     { $limit: 1 }
     ]).toArray();
     
-    console.log(busqueda);
+    if (busqueda.length > 0) {
+        const { _id: categoria, totalVendidas } = busqueda[0];
+        console.log(`🍕 La categoría de pizzas con más ventas históricas es: **${categoria.toUpperCase()}**, con un total de **${totalVendidas} ventas**.`);
+    } else {
+        console.log("❌ No se encontraron datos de ventas.");
+    }
 }

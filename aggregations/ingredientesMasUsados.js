@@ -32,6 +32,12 @@ export async function calcularIngredientes() {
         $sort: { cantidadUsos: -1 }
     }]).toArray();
 
-    console.log(busqueda);
-    
+      if (busqueda.length > 0) {
+        console.log("🧾 Ingredientes más utilizados del 27 de junio al 27 de julio de 2025:\n");
+        busqueda.forEach((ingrediente, index) => {
+            console.log(`${index + 1}. 🧂 ${ingrediente._id} - ${ingrediente.cantidadUsos} usos`);
+        });
+    } else {
+        console.log("❌ No se encontraron datos de ingredientes utilizados en el rango de fechas especificado.");
+    }
 }
